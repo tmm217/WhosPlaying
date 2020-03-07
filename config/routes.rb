@@ -2,6 +2,25 @@ Rails.application.routes.draw do
 
 
 
+  # Routes for the Showfollow resource:
+
+  # CREATE
+  post("/insert_showfollow", { :controller => "showfollows", :action => "create" })
+          
+  # READ
+  get("/showfollows", { :controller => "showfollows", :action => "index" })
+  
+  get("/showfollows/:path_id", { :controller => "showfollows", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_showfollow/:path_id", { :controller => "showfollows", :action => "update" })
+  
+  # DELETE
+  get("/delete_showfollow/:path_id", { :controller => "showfollows", :action => "destroy" })
+
+  #------------------------------
+
   # Routes for the Venuefollow resource:
 
   # CREATE
