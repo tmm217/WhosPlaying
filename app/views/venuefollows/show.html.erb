@@ -1,0 +1,86 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Venuefollow #<%= @venuefollow.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/venuefollows" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/delete_venuefollow/<%= @venuefollow.id %>" class="btn btn-block btn-outline-secondary">
+          Delete venuefollow
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Venue
+      </dt>
+      <dd>
+        <%= @venuefollow.venue_id %>
+      </dd>
+
+      <dt>
+        Fan
+      </dt>
+      <dd>
+        <%= @venuefollow.fan_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@venuefollow.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@venuefollow.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h2>
+      Edit venuefollow
+    </h2>
+
+    <form action="/modify_venuefollow/<%= @venuefollow.id %>"  method="post" >
+      <div class="form-group">
+        <label for="venue_id_box">
+          Venue
+        </label>
+
+        <input type="text" id="venue_id_box" name="query_venue_id" class="form-control" value="<%= @venuefollow.venue_id %>">
+      </div>
+
+      <div class="form-group">
+        <label for="fan_id_box">
+          Fan
+        </label>
+
+        <input type="text" id="fan_id_box" name="query_fan_id" class="form-control" value="<%= @venuefollow.fan_id %>">
+      </div>
+
+      <button class="btn btn-block btn-outline-secondary">
+        Update venuefollow
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
