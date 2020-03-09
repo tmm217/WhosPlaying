@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   # Routes for the Showfollow resource:
 
   # CREATE

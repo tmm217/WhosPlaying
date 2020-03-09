@@ -15,4 +15,6 @@
 class Show < ApplicationRecord
   has_many :showlikes, :class_name => "Showfollow", :dependent => :destroy
   belongs_to :host, :class_name => "Venue"
+
+  validates :showbands, :uniqueness => { :scope => :show_date }
 end
