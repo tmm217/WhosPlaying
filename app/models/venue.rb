@@ -3,6 +3,7 @@
 # Table name: venues
 #
 #  id         :integer          not null, primary key
+#  venue_link :string
 #  venue_name :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
